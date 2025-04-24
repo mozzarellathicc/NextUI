@@ -587,6 +587,13 @@ static void Cheat_getPath(char* filename) {
 }
 
 ///////////////////////////////////////
+static void formatSRMPath(char* work_name, char* filename) {
+	char* tmp = strrchr(work_name, '.');
+	if (tmp != NULL && strlen(tmp) > 2 && strlen(tmp) <= 5) {
+		tmp[0] = '\0';
+	}
+	sprintf(filename, "%s/%s.srm", core.saves_dir, work_name);
+}
 
 static void formatSAVPath(char* work_name, char* filename) {
 	char* tmp = strrchr(work_name, '.');
