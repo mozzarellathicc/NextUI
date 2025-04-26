@@ -40,7 +40,7 @@ all:
 # while to build and only really need building if someone bothered to 
 # pull the repo's manually and there are actually updates to any core 
 # worth including in new NextUI releases.
-	# cd ./$(PLATFORM)/cores && make
+#	# cd ./$(PLATFORM)/cores && make
 	cd ./$(PLATFORM) && make
 
 clean:
